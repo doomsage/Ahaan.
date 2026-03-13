@@ -1,0 +1,349 @@
+:root {
+  --sky: #a6d8ff;
+  --mint: #b9fbc0;
+  --lavender: #d4c1ff;
+  --peach: #ffd6a5;
+  --pink: #ffc6df;
+  --text: #2d2a4a;
+  --card-shadow: 0 15px 35px rgba(123, 103, 192, 0.18);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Nunito", sans-serif;
+  color: var(--text);
+  background: linear-gradient(130deg, var(--sky), var(--mint), var(--lavender), var(--peach), var(--pink));
+  background-size: 300% 300%;
+  animation: bgShift 20s ease infinite;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Baloo 2", cursive;
+  margin: 0 0 0.6rem;
+}
+
+h1 {
+  font-size: clamp(2.2rem, 5vw, 3.8rem);
+}
+
+h2 {
+  text-align: center;
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+}
+
+main {
+  width: min(1100px, 92%);
+  margin: 0 auto 4rem;
+}
+
+.section {
+  margin: 2.4rem 0;
+  padding: 2rem;
+  border-radius: 28px;
+  background: rgba(255, 255, 255, 0.45);
+  backdrop-filter: blur(8px);
+  box-shadow: var(--card-shadow);
+}
+
+.hero {
+  text-align: center;
+  padding: 3rem 1rem 2rem;
+}
+
+.profile-image {
+  width: 170px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 6px solid rgba(255, 255, 255, 0.7);
+  box-shadow: 0 14px 26px rgba(66, 57, 115, 0.25);
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.btn {
+  padding: 0.8rem 1.4rem;
+  border-radius: 999px;
+  text-decoration: none;
+  color: #2f2355;
+  font-weight: 700;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  box-shadow: 0 10px 18px rgba(78, 65, 141, 0.2);
+}
+
+.btn-primary {
+  background: linear-gradient(90deg, #ffd1f4, #c3f5ff);
+}
+
+.btn-secondary {
+  background: linear-gradient(90deg, #ffe0bf, #d2ffd8);
+}
+
+.btn:hover {
+  transform: translateY(-4px) scale(1.03);
+  box-shadow: 0 16px 22px rgba(78, 65, 141, 0.27);
+}
+
+.countdown-grid,
+.cards-grid,
+.gallery-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.countdown-grid {
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+}
+
+.countdown-card {
+  text-align: center;
+  border-radius: 20px;
+  padding: 1rem;
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.85), rgba(255, 246, 255, 0.65));
+}
+
+.countdown-card span {
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+.cards-grid {
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+}
+
+.info-card {
+  border-radius: 18px;
+  padding: 1rem;
+  text-align: center;
+  background: linear-gradient(150deg, rgba(255, 255, 255, 0.78), rgba(232, 255, 249, 0.8));
+  transition: transform 0.25s ease;
+}
+
+.info-card:hover {
+  transform: translateY(-6px);
+}
+
+.skills-list {
+  display: grid;
+  gap: 1rem;
+}
+
+.skill-label {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+}
+
+.skill-track {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.65);
+  border-radius: 999px;
+  height: 14px;
+}
+
+.skill-fill {
+  width: 0;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, #ffbde7, #a6ecff, #bcf8cb);
+  transition: width 1.4s ease;
+}
+
+.weapon-section {
+  text-align: center;
+}
+
+.awm-illustration {
+  margin: 1.5rem auto 0;
+  position: relative;
+  width: min(560px, 100%);
+  height: 120px;
+  filter: drop-shadow(0 8px 14px rgba(85, 65, 131, 0.3));
+}
+
+.awm-barrel,
+.awm-body,
+.awm-scope,
+.awm-stock,
+.awm-trigger {
+  position: absolute;
+  border-radius: 30px;
+  background: linear-gradient(140deg, #ffe9f7, #cbf0ff);
+  border: 2px solid rgba(111, 96, 173, 0.35);
+}
+
+.awm-barrel {
+  height: 20px;
+  width: 65%;
+  top: 50px;
+  left: 0;
+}
+
+.awm-body {
+  height: 28px;
+  width: 35%;
+  top: 45px;
+  right: 12%;
+}
+
+.awm-scope {
+  height: 18px;
+  width: 25%;
+  top: 24px;
+  right: 19%;
+}
+
+.awm-stock {
+  height: 42px;
+  width: 20%;
+  top: 40px;
+  right: 0;
+}
+
+.awm-trigger {
+  height: 26px;
+  width: 20px;
+  top: 70px;
+  right: 24%;
+}
+
+.gallery-grid {
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.gallery-card {
+  margin: 0;
+  border-radius: 20px;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 10px 20px rgba(72, 55, 117, 0.2);
+}
+
+.gallery-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.gallery-card:hover img {
+  transform: scale(1.09);
+}
+
+.text-card p,
+.future-card p {
+  text-align: center;
+  max-width: 720px;
+  margin: 0.6rem auto 0;
+  font-size: 1.1rem;
+}
+
+.future-card {
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.58), rgba(255, 227, 244, 0.65));
+}
+
+.floating-shapes {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.shape {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.5;
+  filter: blur(1px);
+  animation: float 15s ease-in-out infinite;
+}
+
+.shape-1 { width: 120px; height: 120px; background: #ffd3ec; top: 10%; left: 8%; }
+.shape-2 { width: 90px; height: 90px; background: #d4faff; top: 70%; left: 14%; animation-delay: 3s; }
+.shape-3 { width: 140px; height: 140px; background: #d8ffd8; top: 20%; right: 7%; animation-delay: 5s; }
+.shape-4 { width: 85px; height: 85px; background: #f3d9ff; bottom: 10%; right: 12%; animation-delay: 2s; }
+.shape-5 { width: 100px; height: 100px; background: #ffe6c4; top: 45%; right: 42%; animation-delay: 6s; }
+
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(17, 13, 33, 0.85);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  z-index: 20;
+}
+
+.modal.active {
+  display: flex;
+}
+
+.modal img {
+  max-width: min(95vw, 960px);
+  max-height: 88vh;
+  border-radius: 16px;
+  border: 4px solid rgba(255, 255, 255, 0.8);
+}
+
+.modal-close {
+  position: absolute;
+  top: 22px;
+  right: 28px;
+  border: none;
+  background: #ffd2ef;
+  color: #2f2355;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes bgShift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px) translateX(0px); }
+  50% { transform: translateY(-24px) translateX(10px); }
+}
+
+@media (max-width: 640px) {
+  .section { padding: 1.3rem; }
+  .gallery-card img { height: 190px; }
+}
